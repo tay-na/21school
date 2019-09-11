@@ -6,7 +6,7 @@
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 18:00:50 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/11 15:56:00 by tollivan         ###   ########.fr       */
+/*   Updated: 2019/09/11 17:28:50 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,11 @@ char		*ft_strnew(size_t size);
 void		ft_strdel(char **as);
 void		ft_striter(char *s, void (*f)(char *));
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
-char 		*ft_strmap(char const *s, char (*f)(char));
+char		*ft_strmap(char const *s, char (*f)(char));
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
+char		*ft_strnstr(const char *src, const char *dst, size_t len);
 
 #endif

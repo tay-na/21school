@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_numlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 22:48:35 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:23:37 by tollivan         ###   ########.fr       */
+/*   Created: 2019/09/17 19:21:12 by tollivan          #+#    #+#             */
+/*   Updated: 2019/09/17 19:21:50 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_strdel(char **as)
+int		ft_numlen(int n)
 {
-	if (as)
+	int	i;
+
+	i = 0;
+	if (n == 0)
+		i = 1;
+	else if (n < 0)
+		i = 1;
+	while (n != 0)
 	{
-		free(*as);
-		*as = NULL;
+		n = n / 10;
+		i++;
 	}
+	return (i);
 }

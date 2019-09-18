@@ -6,7 +6,7 @@
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 15:11:29 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/11 15:16:35 by tollivan         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:32:09 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*dst;
 	int		i;
 
-	if (*s)
+	if (s)
 	{
 		dst = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 		if (dst)

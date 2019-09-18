@@ -6,15 +6,18 @@
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 13:09:13 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/11 14:07:33 by tollivan         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:28:13 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	while (*s)
+	if (s)
 	{
-		(*f)(s);
-		s++;
+		while (*s)
+		{
+			(*f)(s);
+			s++;
+		}
 	}
 }

@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 22:48:35 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:23:37 by tollivan         ###   ########.fr       */
+/*   Created: 2019/09/16 18:58:26 by tollivan          #+#    #+#             */
+/*   Updated: 2019/09/17 19:16:16 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	if (as)
+	char	*dst;
+	size_t	i;
+
+	i = 0;
+	dst = (char *)malloc(sizeof(char) * len + 1);
+	if (!dst)
+		return (0);
+	else
 	{
-		free(*as);
-		*as = NULL;
+		while (s[start] != '\0' && i < len)
+		{
+			dst[i] = s[start];
+			i++;
+			start++;
+		}
+		dst[i] = '\0';
+		return (dst);
 	}
 }

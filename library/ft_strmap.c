@@ -6,7 +6,7 @@
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 14:44:44 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/11 15:11:14 by tollivan         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:31:56 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*dst;
 	int		i;
 
-	if (*s)
+	if (s)
 	{
 		dst = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 		if (dst)

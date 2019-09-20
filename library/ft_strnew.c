@@ -6,7 +6,7 @@
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 22:47:31 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:22:56 by tollivan         ###   ########.fr       */
+/*   Updated: 2019/09/20 16:38:05 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strnew(size_t size)
 {
 	char	*dst;
 
+	if (size + 1 < size)
+		return (0);
 	if (!(dst = ft_memalloc(size + 1)))
 		return (0);
 	while (*dst)

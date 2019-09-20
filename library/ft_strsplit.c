@@ -6,7 +6,7 @@
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 19:19:28 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/18 17:23:58 by tollivan         ###   ########.fr       */
+/*   Updated: 2019/09/19 22:07:51 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static size_t	ft_count(const char *s, char c)
 
 	i = 0;
 	count = 0;
+	if (!s[0])
+		return (0);
 	if (s[0] != c)
 		count++;
 	while (s[i] != '\0')

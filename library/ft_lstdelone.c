@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 13:09:13 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/19 22:22:01 by tollivan         ###   ########.fr       */
+/*   Created: 2019/09/19 16:30:03 by tollivan          #+#    #+#             */
+/*   Updated: 2019/09/19 16:53:27 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striter(char *s, void (*f)(char *))
+#include "libft.h"
+
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	if (s && f)
+	if (alst)
 	{
-		while (*s)
-		{
-			(*f)(s);
-			s++;
-		}
+		del((*alst)->content, (*alst)->content_size);
+		free(*alst);
+		*alst = NULL;
 	}
 }

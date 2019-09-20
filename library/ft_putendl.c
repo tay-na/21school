@@ -6,7 +6,7 @@
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 12:54:00 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/09 18:14:15 by tollivan         ###   ########.fr       */
+/*   Updated: 2019/09/19 13:31:19 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	ft_putendl(char const *str)
 {
-	while (*str)
+	if (str)
 	{
-		write(1, str, 1);
-		str++;
+		while (*str)
+		{
+			write(1, str, 1);
+			str++;
+		}
+		write(1, "\n", 1);
 	}
-	write(1, "\n", 1);
 }

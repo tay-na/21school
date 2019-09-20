@@ -6,7 +6,7 @@
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 18:19:38 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/09 18:53:39 by tollivan         ###   ########.fr       */
+/*   Updated: 2019/09/19 13:35:15 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char const *str, int fd)
 {
-	if (*str)
+	if (str)
 	{
 		while (*str)
 		{

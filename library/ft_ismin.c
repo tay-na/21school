@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_ismin.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tollivan <tollivan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 13:09:13 by tollivan          #+#    #+#             */
-/*   Updated: 2019/09/19 22:22:01 by tollivan         ###   ########.fr       */
+/*   Created: 2019/09/19 22:55:21 by tollivan          #+#    #+#             */
+/*   Updated: 2019/09/20 16:01:55 by tollivan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striter(char *s, void (*f)(char *))
+#include "libft.h"
+
+size_t		ft_ismin(size_t a, size_t b)
 {
-	if (s && f)
-	{
-		while (*s)
-		{
-			(*f)(s);
-			s++;
-		}
-	}
+	if (a < b)
+		return (a);
+	else
+		return (b);
 }
